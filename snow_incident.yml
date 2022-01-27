@@ -4,8 +4,6 @@
   collections:
     - servicenow.servicenow
   gather_facts: false
-  vars:
-    ansible_connection: network_cli
 
   tasks:
 
