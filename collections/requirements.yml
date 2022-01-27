@@ -1,3 +1,4 @@
 ---
 collections:
 - servicenow.servicenow
+- cisco.ios
