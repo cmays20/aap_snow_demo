@@ -16,8 +16,8 @@
 
     - name: VISUAL OUTPUT
       debug:
-        var: banner.stdout[0]
-      when: not banner.stdout[0]
+        var: banner.stdout_lines
+      when: not banner.stdout_lines
 
     - name: OPEN AN INCIDENT (SERVICENOW) IF NO BANNER IS CONFIGURED
       block:
@@ -40,4 +40,4 @@
         - name: VISUAL OUTPUT OF INCIDENT NUMBER
           debug:
             var: snow_var.record.number
-      when: not banner.stdout[0]
+      when: not banner.stdout_lines
