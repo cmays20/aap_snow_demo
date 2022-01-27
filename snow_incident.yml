@@ -3,15 +3,15 @@
   hosts: rtr1
   collections:
     - servicenow.servicenow
-  connection: local
   gather_facts: false
+  vars:
+    ansible_connection: network_cli
 
   tasks:
 
     - name: GATHER THE CURRENT BANNER ON THE DEVICE
-      ios_command:
-        commands:
-          - show banner login
+      cli_command:
+        command: show banner login
       register: banner
 
     - name: VISUAL OUTPUT
