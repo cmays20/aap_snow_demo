@@ -1,0 +1,11 @@
+---
+- name: ROUTER REMOVE BANNER
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+
+    - name: REMOVE THE LOGIN BANNER
+      ios_banner:
+        banner: login
+        state: absent
